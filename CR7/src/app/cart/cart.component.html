@@ -1,0 +1,16 @@
+<h3>Items in your cart <img src="assets/img/cart.png" alt="Cart" width="30" height="30" ></h3>
+
+<div class="row">
+<div class="box">
+		<div *ngFor="let item of items" class=" cart-item card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
+  			<div class="card-body">
+          <h5 class="card-title">{{ item.destination }}</h5>
+          <p class="card-text">Dates:<br> {{ item.dates }}</p>
+          <p class="card-text">Duration:<br> {{ item.duration }}</p>
+          <p class="card-text">Price:<br> {{ item.price }} €</p>
+  			</div>
+		</div>
+  </div>
+</div>
+

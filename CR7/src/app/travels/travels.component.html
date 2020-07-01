@@ -1,0 +1,19 @@
+
+<div class="row">
+	<div class="box">
+		<div *ngFor="let product of products; index as productId" class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ product.picture }}" alt="Card image cap">
+  			<div class="card-body">
+          <h5 class="card-title">{{ product.destination }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Dates:<br> {{ product.dates }}</p>
+          <p class="card-text">Duration:<br> {{ product.duration }}</p>
+          <p class="card-text">Price:<br> {{ product.price }} €</p>
+          <a class="btn btn-secondary" [routerLink]="['/products', productId]" (click)="addToCart(product)">Add to cart</a>
+  			</div>
+		</div>
+	</div>
+</div>
+<div class="cart_button">
+     <h2>Go to <a class="btn btn-secondary" routerLink="/cart">your cart</a></h2>
+    </div>
